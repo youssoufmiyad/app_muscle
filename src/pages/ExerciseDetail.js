@@ -25,15 +25,20 @@ const ExerciseDetail = () => {
       const exerciseVideosData = await fetchData(`${youtubeSearchUrl}/search?query=${exerciseDetailData.name} exercise`, videoOptions);
       setExerciseVideos(exerciseVideosData[0]);
       console.log(exerciseVideos);
+
+
     }
     fetchExercisesData();
   }, [id]);
 
+  const targetMuscleExercises = exerciseDetail.target;
+  const equipementExercises = exerciseDetail.equipment;
   return (
     <Box>
       <Detail exerciseDetail={exerciseDetail} />
       <ExerciseVideos exerciseVideos={exerciseVideos} name={exerciseDetail.name}/>
-      <SimilarExercises />
+      <SimilarExercises targetMuscleExercises={targetMuscleExercises}
+      equipmentExercises={equipementExercises}/>
     </Box>
   )
 }
