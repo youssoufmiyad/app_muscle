@@ -11,7 +11,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 
 const App = () => {
-  return (
+   return (
     <Box width="400px" sx={{width: { xl: '1488px'}}} m="auto">
         <Navbar/>
         <Routes>
@@ -24,5 +24,7 @@ const App = () => {
     </Box>
   )
 }
+
+
 
 export default App
