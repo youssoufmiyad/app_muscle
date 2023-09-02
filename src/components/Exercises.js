@@ -11,8 +11,8 @@ const Exercises = ({ exercises, setExercices, equipment }) => {
   const [exercisesPerPage] = useState(3);
 
   const indexOfLastExercise = currentPage * exercisesPerPage
-  const indexOfFirstExercise = currentPage - exercisesPerPage
-  const currentExercices = exercises.slice(indexOfFirstExercise,indexOfLastExercise);
+  const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage
+  const currentExercises = exercises.slice(indexOfFirstExercise,indexOfLastExercise);
 
   const paginate = (event, value) => {
     setCurrentPage(value)
@@ -50,10 +50,9 @@ const Exercises = ({ exercises, setExercices, equipment }) => {
       </Typography>
       <Stack direction="row" sx={{ gap: { lg: '107px', xs: '50px' } }}
         flexWrap="wrap" justifyContent="center">
-        {currentExercices.map((exercise, idx) => {
-          return (
-            <ExerciseCard key={idx} exercise={exercise} />)
-        })}
+        {currentExercises.map((exercise, idx) => (
+          <ExerciseCard key={idx} exercise={exercise} />
+        ))}
         <Stack>
           <Stack mt="100px" alignItems="center">
             {exercises.length > 9 &&(
