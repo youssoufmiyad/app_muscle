@@ -8,7 +8,7 @@ import ExerciseVideos from '../components/ExerciseVideos'
 import SimilarExercises from '../components/SimilarExercises'
 
 const ExerciseDetail = () => {
-  const [exerciseDetail, setexerciseDetail] = useState({});
+  const [exerciseDetail, setExerciseDetail] = useState({});
   const [exerciseVideos, setExerciseVideos] = useState([]);
   const { id } = useParams();
 
@@ -20,14 +20,16 @@ const ExerciseDetail = () => {
       
       
       const exerciseDetailData = await fetchData(`${exerciseDbUrl}/exercises/exercise/${id}`, exerciseOptions);
-      setexerciseDetail(exerciseDetailData);
+      setExerciseDetail(exerciseDetailData);
+      console.log(exerciseDetail)
 
       const exerciseVideosData = await fetchData(`${youtubeSearchUrl}/search?query=${exerciseDetailData.name} exercise`, videoOptions);
-      setExerciseVideos(exerciseVideosData[0]);
-      console.log(exerciseVideos);
+      console.log(exerciseVideosData.contents.video)
+      setExerciseVideos(exerciseVideosData.contents);
+      console.log(exerciseVideos.video);
 
 
-    }
+    };
     fetchExercisesData();
   }, [id]);
 

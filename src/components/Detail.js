@@ -31,8 +31,8 @@ const Detail = ({ exerciseDetail }) => {
                 </Typography>
                 <Typography sx={{ fontSize: { lg: '24px', xs: '18px' } }} variant='h6'>
                     Exercises keep you strong.{' '}
-                    <span style={{ textTransform: 'capitalize' }}>{name}</span> is a pretty descent<br /> exercises to target your {target}. It will help you improve your{bodyPart}
-                    <br /> mood and gain energy.
+                    <span style={{ textTransform: 'capitalize' }}>{name}</span> is a pretty descent<br /> exercises to target your {target}. It will help you improve your {bodyPart}
+                    <br />.
                 </Typography>
                 {extraDetail.map((item) => {
                     <Stack key={item.name} gap="30px" direction={'column'} alignItems={"center"}>
