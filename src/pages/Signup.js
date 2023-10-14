@@ -3,7 +3,9 @@ import { Button, Input, Stack, Link, Typography } from '@mui/material'
 import React, { useState, useRef, useEffect } from 'react'
 import { faCheck, faTimes, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import axios from './api/axios'
 
+const REGISTER_URL = '/signup';
 const USER_REGEX = /^[A-z][A-z0-9.-_]+@[A-Za-z0-9.-]{1,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,24}$/;
 
@@ -61,7 +63,28 @@ const Signup = () => {
         }
 
         console.log(`user = ${user} pwd = ${password}`)
-        setSuccess(true);
+
+        try {
+            const resp = await axios.post(REGISTER_URL,
+                JSON.stringify({ user, password }),
+                {
+                    headers: { 'Content-Type': 'application/json' },
+                    withCredentials: true
+                });
+            console.log(resp.data);
+            console.log(resp.accessToken);
+            console.log(JSON.stringify(resp));
+            setSuccess(true);
+        } catch (error) {
+            if (!error?.resp) {
+                setErrMsg('No Server Response');
+            } else if (err.resp?.status === 409) {
+                setErrMsg('Username Taken');
+            } else {
+                setErrMsg('Registration Failed')
+            }
+            errRef.current.focus();
+        }
     }
 
     return (

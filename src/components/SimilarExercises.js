@@ -5,9 +5,6 @@ import HorizontalScrollbar from './HorizontalScrollbar';
 import Loader from './Loader';
 
 const SimilarExercises = ({targetMuscleExercises, equipmentExercises}) => {
-  {console.log("muscle = "+ targetMuscleExercises)}
-  {console.log("equipment = "+ equipmentExercises)}
-
   return (
     <Box sx={{ mt: {lg: "100px", xs:"0"}}}>
         <Typography variant='h3' mb={3}>Exercises with the same goal</Typography>

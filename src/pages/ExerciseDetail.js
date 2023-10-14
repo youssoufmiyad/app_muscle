@@ -26,9 +26,7 @@ const ExerciseDetail = () => {
       console.log(exerciseDetail)
 
       const exerciseVideosData = await fetchData(`${youtubeSearchUrl}/search?query=${exerciseDetailData.name} exercise`, videoOptions);
-      console.log(exerciseVideosData.contents.video)
       setExerciseVideos(exerciseVideosData.contents);
-      console.log(exerciseVideos[2]);
 
       const targetMuscleExercisesData = await fetchData(`${exerciseDbUrl}/exercises/target/${exerciseDetailData.target}`, exerciseOptions);
       setTargetMuscleExercises(targetMuscleExercisesData);
@@ -42,14 +40,15 @@ const ExerciseDetail = () => {
   }, [id]);
 
   console.log("EQUIPMENT = " + exerciseDetail.equipment);
-  console.log("LENGTH = " + exerciseDetail.equipment);
+  console.log("TARGET = " + exerciseDetail.target);
   return (
     <Box>
       <Detail exerciseDetail={exerciseDetail} />
-      {/* <ExerciseVideos exerciseVideos={exerciseVideos} name={exerciseDetail.name}/> */}
-      <SimilarExercises targetMuscleExercises = {targetMuscleExercises}
-      equipmentExercises={equipmentExercises}
-        />
+      <ExerciseVideos exerciseVideos={exerciseVideos}
+        name={exerciseDetail.name} />
+      {/* <SimilarExercises targetMuscleExercises={targetMuscleExercises}
+        equipmentExercises={equipmentExercises}
+      /> */}
     </Box>
   )
 }
