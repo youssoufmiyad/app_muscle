@@ -31,7 +31,7 @@ cd Chemin/Vers/app_muscle
 npm start
 ```
 
-Une fois les commandes exécutées, l'application s'ouvrira à l'adresse [http://localhost:3000].
+Une fois les commandes exécutées, l'application s'ouvrira à l'adresse (http://localhost:3000).
 ![Page d'accueil](/screenshots/home.png)
 ![Barre de recherche d'exercice](/screenshots/searchExercices.png)
 ![Page d'exercice](/screenshots/Exercice.png)
