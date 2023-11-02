@@ -17,7 +17,7 @@ APIs : "ExerciceDB" de [Justin Mozley](https://rapidapi.com/user/justin-WFnsXH_t
 - Représentation graphique des exercices :white_check_mark:
 - Identification / authentification :construction:
 - Composition d'un programme (sauvegardé sur le compte de l'utilisateur) :hourglass_flowing_sand:
-- Redirection vers des vidéos pertinentes pour chaque exercice :construction:
+- Redirection vers des vidéos pertinentes pour chaque exercice :white_check_mark:
 - Suivi de l'IMC :hourglass_flowing_sand:
 - Version mobile :hourglass_flowing_sand:
 
