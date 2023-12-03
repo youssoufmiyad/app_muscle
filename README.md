@@ -1,6 +1,5 @@
-# STRETCHED OUT (nom provisoire)
-Stretched Out est une application web faisant office de compagnon sportif,
-je la développe à titre éducatif dans mon temps libre (pour l'instant).
+# Outdated (suite du projet dans le répertoire STRETCHED OUT)
+Il s'agit une application web faisant office de compagnon sportif.
 
 ## Stack technique
 > Notez que cette section peut évoluer en fonction des besoins de l'app.
@@ -15,15 +14,9 @@ APIs : "ExerciceDB" de [Justin Mozley](https://rapidapi.com/user/justin-WFnsXH_t
 - Trier en fonction de la partie du corps à entrainer :white_check_mark:
 - Chercher un exercice en particulier :white_check_mark:
 - Représentation graphique des exercices :white_check_mark:
-- Identification / authentification :construction:
-- Composition d'un programme (sauvegardé sur le compte de l'utilisateur) :hourglass_flowing_sand:
 - Redirection vers des vidéos pertinentes pour chaque exercice :white_check_mark:
-- Suivi de l'IMC :hourglass_flowing_sand:
-- Version mobile :hourglass_flowing_sand:
 
 ## Lancement
-> [!NOTE]
-> L'application étant en early stage, je ne l'ai pas encore déployé proprement. C'est prévu.
 
 Pour lancer l'appli, il vous faut écrire `npm start` dans le dossier de cette dernière.
 ```
@@ -37,4 +30,4 @@ Une fois les commandes exécutées, l'application s'ouvrira à l'adresse (http:/
 ![Page d'exercice](/screenshots/Exercice.png)
 
 ## État du projet
-Le projet est **momentanément** suspendu et reprendra lorsque je pourrai y consacrer du temps.
+Il s'agit de la V1 du projet, la version actuelle se trouve dans le répertoire **STRETCHED OUT**.
